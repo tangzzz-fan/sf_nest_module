@@ -1,0 +1,15 @@
+FROM node:18-alpine
+
+WORKDIR /usr/src/app
+
+# 安装必要的构建工具
+RUN apk add --no-cache python3 make g++
+
+COPY package*.json ./
+
+# 使用 legacy-peer-deps 标志安装依赖
+RUN npm cache clean --force && npm install --legacy-peer-deps
+
+COPY . .
+
+CMD ["npm", "run", "start:dev"] 
