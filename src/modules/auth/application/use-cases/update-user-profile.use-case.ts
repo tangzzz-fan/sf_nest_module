@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { IUserRepository } from '../../../domain/repositories/user-repository.interface';
-import { INJECTION_TOKENS } from '../../../domain/constants/injection-tokens';
+import { IUserRepository } from '../../../../domain/repositories/user-repository.interface';
+import { INJECTION_TOKENS } from '../../../../domain/constants/injection-tokens';
 
 export class UpdateUserProfileDto {
     @ApiProperty({ description: '用户ID', example: '550e8400-e29b-41d4-a716-446655440000', readOnly: true })

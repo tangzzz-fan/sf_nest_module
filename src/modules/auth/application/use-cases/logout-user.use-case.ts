@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { IAuthService } from '../../../domain/services/auth-service.interface';
-import { INJECTION_TOKENS } from '../../../domain/constants/injection-tokens';
+import { IAuthService } from '../../domain/interfaces/auth-service.interface';
+import { INJECTION_TOKENS } from '../../../../domain/constants/injection-tokens';
 
 export class LogoutUserDto {
     userId: string;

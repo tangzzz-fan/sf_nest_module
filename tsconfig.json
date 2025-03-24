@@ -27,17 +27,41 @@
         "noImplicitThis": true,
         "alwaysStrict": true,
         "paths": {
+            "@modules/*": [
+                "src/modules/*"
+            ],
             "@domain/*": [
-                "src/domain/*"
+                "src/shared/domain/*"
             ],
             "@application/*": [
-                "src/application/*"
+                "src/shared/application/*"
             ],
             "@infrastructure/*": [
-                "src/infrastructure/*"
+                "src/shared/infrastructure/*"
             ],
             "@presentation/*": [
-                "src/presentation/*"
+                "src/shared/presentation/*"
+            ],
+            "@auth/*": [
+                "src/modules/auth/*"
+            ],
+            "@auth/domain/*": [
+                "src/modules/auth/domain/*"
+            ],
+            "@auth/application/*": [
+                "src/modules/auth/application/*"
+            ],
+            "@auth/infrastructure/*": [
+                "src/modules/auth/infrastructure/*"
+            ],
+            "@auth/presentation/*": [
+                "src/modules/auth/presentation/*"
+            ],
+            "@user/*": [
+                "src/modules/user/*"
+            ],
+            "@user/domain/*": [
+                "src/modules/user/domain/*"
             ],
             "@entities/*": [
                 "src/domain/entities/*"
@@ -46,13 +70,13 @@
                 "src/domain/interfaces/*"
             ],
             "@repositories/*": [
-                "src/domain/repositories/*"
+                "src/shared/domain/repositories/*"
             ],
             "@value-objects/*": [
-                "src/domain/value-objects/*"
+                "src/modules/auth/domain/value-objects/*"
             ],
             "@constants/*": [
-                "src/domain/constants/*"
+                "src/shared/domain/constants/*"
             ],
             "@use-cases/*": [
                 "src/application/use-cases/*"
@@ -61,13 +85,13 @@
                 "src/presentation/controllers/*"
             ],
             "@guards/*": [
-                "src/presentation/guards/*"
+                "src/modules/auth/presentation/guards/*"
             ],
             "@gateways/*": [
                 "src/presentation/gateways/*"
             ],
             "@services/*": [
-                "src/infrastructure/services/*"
+                "src/modules/auth/infrastructure/services/*"
             ],
             "@repositories-impl/*": [
                 "src/infrastructure/repositories/*"

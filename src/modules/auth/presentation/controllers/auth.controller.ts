@@ -1,12 +1,12 @@
 import { Controller, Post, Body, UseGuards, Get, Req, Put, HttpCode, HttpStatus } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiBody, ApiBearerAuth, ApiParam } from '@nestjs/swagger';
-import { RegisterUserUseCase, RegisterUserDto } from '../../application/use-cases/auth/register-user.use-case';
-import { LoginUserUseCase, LoginUserDto } from '../../application/use-cases/auth/login-user.use-case';
-import { RefreshTokenUseCase, RefreshTokenDto } from '../../application/use-cases/auth/refresh-token.use-case';
-import { UpdateUserProfileUseCase, UpdateUserProfileDto } from '../../application/use-cases/auth/update-user-profile.use-case';
-import { ChangePasswordUseCase, ChangePasswordDto } from '../../application/use-cases/auth/change-password.use-case';
-import { LogoutUserUseCase } from '../../application/use-cases/auth/logout-user.use-case';
-import { JwtAuthGuard } from '../guards/jwt-auth.guard';
+import { RegisterUserUseCase, RegisterUserDto } from '../../application/use-cases/register-user.use-case';
+import { LoginUserUseCase, LoginUserDto } from '../../application/use-cases/login-user.use-case';
+import { RefreshTokenUseCase, RefreshTokenDto } from '../../application/use-cases/refresh-token.use-case';
+import { UpdateUserProfileUseCase, UpdateUserProfileDto } from '../../application/use-cases/update-user-profile.use-case';
+import { ChangePasswordUseCase, ChangePasswordDto } from '../../application/use-cases/change-password.use-case';
+import { LogoutUserUseCase } from '../../application/use-cases/logout-user.use-case';
+import { JwtAuthGuard } from '../../../auth/presentation/guards/jwt-auth.guard';
 import { Request } from 'express';
 
 @ApiTags('认证')

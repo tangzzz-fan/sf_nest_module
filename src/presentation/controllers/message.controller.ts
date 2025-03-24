@@ -1,5 +1,5 @@
 import { Controller, Post, Body, UseGuards, Get, Param, Delete } from '@nestjs/common';
-import { JwtAuthGuard } from '../guards/jwt-auth.guard';
+import { JwtAuthGuard } from '../../modules/auth/presentation/guards/jwt-auth.guard';
 import { ApiTags, ApiOperation, ApiResponse, ApiBody, ApiBearerAuth } from '@nestjs/swagger';
 
 @ApiTags('消息')

@@ -1,9 +1,9 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { ApiProperty } from '@nestjs/swagger';
-import { IUserRepository } from '../../../domain/repositories/user-repository.interface';
-import { IAuthService } from '../../../domain/services/auth-service.interface';
-import { INJECTION_TOKENS } from '../../../domain/constants/injection-tokens';
-import { TokenPayload } from '../../../domain/value-objects/token-payload';
+import { IUserRepository } from '../../../../domain/repositories/user-repository.interface';
+import { IAuthService } from '../../domain/interfaces/auth-service.interface';
+import { INJECTION_TOKENS } from '../../../../domain/constants/injection-tokens';
+import { TokenPayload } from '../../../auth/domain/value-objects/token-payload';
 
 export class LoginUserDto {
     @ApiProperty({ description: '电子邮箱', example: 'user@example.com' })

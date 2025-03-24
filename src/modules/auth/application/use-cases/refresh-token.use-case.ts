@@ -1,9 +1,9 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { ApiProperty } from '@nestjs/swagger';
-import { IAuthService } from '../../../domain/services/auth-service.interface';
-import { IUserRepository } from '../../../domain/repositories/user-repository.interface';
-import { INJECTION_TOKENS } from '../../../domain/constants/injection-tokens';
-import { TokenPayload } from '../../../domain/value-objects/token-payload';
+import { IAuthService } from '../../domain/interfaces/auth-service.interface';
+import { IUserRepository } from '../../../../domain/repositories/user-repository.interface';
+import { INJECTION_TOKENS } from '../../../../domain/constants/injection-tokens';
+import { TokenPayload } from '../../../auth/domain/value-objects/token-payload';
 
 export class RefreshTokenDto {
     @ApiProperty({ description: '刷新令牌', example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...' })

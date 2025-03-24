@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Message } from '../../domain/entities/message.entity';
-import { IMessageRepository } from '../../domain/repositories/message.repository.interface';
+import { IMessageRepository } from '../../domain/repositories/message-repository.interface';
 
 @Injectable()
 export class MessageRepository implements IMessageRepository {
@@ -10,6 +10,22 @@ export class MessageRepository implements IMessageRepository {
         @InjectRepository(Message)
         private readonly repository: Repository<Message>,
     ) { }
+    async delete(id: string): Promise<void> {
+        await this.repository.delete(id);
+    }
+
+    async findByUser(userId: string): Promise<Message[]> {
+        return this.repository.find({
+            where: { senderId: userId },
+            relations: ['sender'],
+            order: { createdAt: 'DESC' },
+        });
+    }
+
+    async update(message: Message): Promise<Message> {
+        return this.repository.save(message);
+
+    }
 
     async findById(id: string): Promise<Message | null> {
         return this.repository.findOne({

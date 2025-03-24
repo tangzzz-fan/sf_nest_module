@@ -14,8 +14,8 @@ import { INJECTION_TOKENS } from './domain/constants/injection-tokens';
 import { MessageController } from './presentation/controllers/message.controller';
 import { ChatGateway } from './presentation/gateways/chat.gateway';
 
-import { JwtStrategy } from './infrastructure/auth/jwt.strategy';
-import { AuthModule } from './auth.module';
+import { JwtStrategy } from './modules/auth/infrastructure/strategies/jwt.strategy';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
     imports: [

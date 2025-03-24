@@ -7,4 +7,4 @@ export interface IAuthService {
     hashPassword(password: string): Promise<string>;
     comparePassword(plainPassword: string, hashedPassword: string): Promise<boolean>;
     invalidateToken(token: string): Promise<void>;
-} 
+}
