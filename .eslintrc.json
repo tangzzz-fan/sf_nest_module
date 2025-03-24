@@ -1,0 +1,49 @@
+{
+    "rules": {
+        "import/no-unresolved": "error",
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ]
+                ],
+                "pathGroups": [
+                    {
+                        "pattern": "@domain/**",
+                        "group": "internal",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@application/**",
+                        "group": "internal",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@infrastructure/**",
+                        "group": "internal",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@presentation/**",
+                        "group": "internal",
+                        "position": "before"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": [
+                    "builtin"
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ]
+    }
+}

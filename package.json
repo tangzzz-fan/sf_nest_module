@@ -85,6 +85,24 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^@domain/(.*)$": "<rootDir>/src/domain/$1",
+      "^@application/(.*)$": "<rootDir>/src/application/$1",
+      "^@infrastructure/(.*)$": "<rootDir>/src/infrastructure/$1",
+      "^@presentation/(.*)$": "<rootDir>/src/presentation/$1",
+      "^@entities/(.*)$": "<rootDir>/src/domain/entities/$1",
+      "^@interfaces/(.*)$": "<rootDir>/src/domain/interfaces/$1",
+      "^@repositories/(.*)$": "<rootDir>/src/domain/repositories/$1",
+      "^@value-objects/(.*)$": "<rootDir>/src/domain/value-objects/$1",
+      "^@constants/(.*)$": "<rootDir>/src/domain/constants/$1",
+      "^@use-cases/(.*)$": "<rootDir>/src/application/use-cases/$1",
+      "^@controllers/(.*)$": "<rootDir>/src/presentation/controllers/$1",
+      "^@guards/(.*)$": "<rootDir>/src/presentation/guards/$1",
+      "^@gateways/(.*)$": "<rootDir>/src/presentation/gateways/$1",
+      "^@services/(.*)$": "<rootDir>/src/infrastructure/services/$1",
+      "^@repositories-impl/(.*)$": "<rootDir>/src/infrastructure/repositories/$1",
+      "^@config/(.*)$": "<rootDir>/src/config/$1"
+    }
   }
 }

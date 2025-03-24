@@ -1,21 +1,88 @@
 {
     "compilerOptions": {
+        "target": "es2017",
         "module": "commonjs",
+        "lib": [
+            "es2017",
+            "es2018",
+            "es2019",
+            "es2020"
+        ],
         "declaration": true,
         "removeComments": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
-        "target": "ES2021",
         "sourceMap": true,
         "outDir": "./dist",
         "baseUrl": "./",
         "incremental": true,
         "skipLibCheck": true,
-        "strictNullChecks": false,
+        "strict": true,
         "noImplicitAny": false,
-        "strictBindCallApply": false,
-        "forceConsistentCasingInFileNames": false,
-        "noFallthroughCasesInSwitch": false
-    }
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": false,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "paths": {
+            "@domain/*": [
+                "src/domain/*"
+            ],
+            "@application/*": [
+                "src/application/*"
+            ],
+            "@infrastructure/*": [
+                "src/infrastructure/*"
+            ],
+            "@presentation/*": [
+                "src/presentation/*"
+            ],
+            "@entities/*": [
+                "src/domain/entities/*"
+            ],
+            "@interfaces/*": [
+                "src/domain/interfaces/*"
+            ],
+            "@repositories/*": [
+                "src/domain/repositories/*"
+            ],
+            "@value-objects/*": [
+                "src/domain/value-objects/*"
+            ],
+            "@constants/*": [
+                "src/domain/constants/*"
+            ],
+            "@use-cases/*": [
+                "src/application/use-cases/*"
+            ],
+            "@controllers/*": [
+                "src/presentation/controllers/*"
+            ],
+            "@guards/*": [
+                "src/presentation/guards/*"
+            ],
+            "@gateways/*": [
+                "src/presentation/gateways/*"
+            ],
+            "@services/*": [
+                "src/infrastructure/services/*"
+            ],
+            "@repositories-impl/*": [
+                "src/infrastructure/repositories/*"
+            ],
+            "@config/*": [
+                "src/config/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*spec.ts"
+    ]
 }
